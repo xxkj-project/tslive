@@ -1,0 +1,15 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+           {
+             "appID": "QDPGTX7A74.com.tangseng.show",
+             "paths": ["*"]
+           },
+          {
+             "appID": "2G66YD3MT3.com.ubex.tangSeng",
+             "paths": ["*"]
+           }
+       ]
+   }
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+    <meta name="author" content="CYW" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>唐僧直播</title>
+
+    <script>
+      !(function (e) {
+        function t(n) {
+          if (i[n]) {
+            return i[n].exports;
+          }
+          var r = (i[n] = { exports: {}, id: n, loaded: !1 });
+          return (
+            e[n].call(r.exports, r, r.exports, t), (r.loaded = !0), r.exports
+          );
+        }
+        var i = {};
+        return (t.m = e), (t.c = i), (t.p = ""), t(0);
+      })([
+        function (e, t) {
+          Object.defineProperty(t, "__esModule", { value: !0 });
+          var i = window;
+          (t["default"] = i.vl = function (e, t) {
+            var n = e || 100,
+              r = t || 750,
+              a = i.document,
+              d = navigator.userAgent,
+              o = d.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),
+              l = d.match(/U3\/((\d+|\.){5,})/i),
+              s = l && parseInt(l[1].split(".").join(""), 10) >= 80,
+              u = a.documentElement,
+              c = 1;
+            if ((o && o[1] > 534) || s) {
+              u.style.fontSize = n + "px";
+              var p = a.createElement("div");
+              p.setAttribute("style", "width: 1rem;display:none"),
+                u.appendChild(p);
+              var m = i.getComputedStyle(p).width;
+              if ((u.removeChild(p), m !== u.style.fontSize)) {
+                var v = parseInt(m, 10);
+                c = 100 / v;
+              }
+            }
+            var f = a.querySelector('meta[name="viewport"]');
+            f ||
+              ((f = a.createElement("meta")),
+              f.setAttribute("name", "viewport"),
+              a.head.appendChild(f)),
+              f.setAttribute(
+                "content",
+                "width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"
+              );
+            var h = function () {
+              u.style.fontSize = (n / r) * u.clientWidth * c + "px";
+            };
+            h(), i.addEventListener("resize", h);
+          }),
+            (e.exports = t["default"]);
+        },
+      ]);
+      vl(100, 750);
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+        user-select: none;
+      }
+
+      ol,
+      ul,
+      li {
+        list-style: none;
+      }
+
+      b,
+      strong {
+        font-weight: bold;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      caption,
+      th,
+      td {
+        text-align: left;
+        font-weight: normal;
+      }
+
+      img {
+        border: 0;
+        vertical-align: middle;
+      }
+
+      a {
+        text-decoration: none;
+        vertical-align: baseline;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus,
+      a:active {
+        outline: 0;
+      }
+
+      body {
+        font-size: 12px;
+        color: #333;
+        font-family: Arial, "Microsoft YaHei";
+      }
+
+      .shadow {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        display: none;
+      }
+
+      .shadow img {
+        width: 80%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+      }
+
+      .main_wrap {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #fff;
+        background: url(./images/bg.png) no-repeat center top;
+        background-size: cover;
+      }
+
+      .main_wrap .bg {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding-top: 2.22rem;
+      }
+
+      .main_wrap .logo {
+        display: block;
+        width: 1.8rem;
+        height: 1.8rem;
+        background: url("./images/logo.png") no-repeat center / cover;
+        border-radius: 0.2rem;
+        margin: 0 auto;
+      }
+      .main_wrap .logo_txt {
+        display: block;
+        width: 1.4rem;
+        height: 0.35rem;
+        background: url("./images/logo_txt.png") no-repeat center / cover;
+        margin: 0.3rem auto 0;
+      }
+      .main_wrap .downloadBtn {
+        display: block;
+        width: 3.7rem;
+        height: 0.92rem;
+      }
+      .main_wrap .android_btn {
+        background: url("./images/android_btn.png") no-repeat center / cover;
+        margin: 1.98rem auto 0;
+      }
+      .main_wrap .ios_btn {
+        background: url("./images/ios_btn.png") no-repeat center / cover;
+        margin: 0.98rem auto 0;
+      }
+      /* .main_wrap .code {
+        width: 3.2rem;
+        height: 3.2rem;
+        background-color: #fff;
+        margin: 1.02rem auto 0;
+      }
+      .main_wrap .code .code_img {
+        width: 3.2rem;
+        height: 3.2rem;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <div class="shadow" id="shadow">
+      <img src="./images/wechat.jpg" />
+    </div>
+    <div class="main_wrap">
+      <div class="bg">
+        <span class="logo"></span>
+        <span class="logo_txt"></span>
+        <span class="android_btn downloadBtn" onclick="android()"></span>
+        <span class="ios_btn downloadBtn" onclick="apple()"></span>
+        <!-- <div class="code">
+                <img class="code_img" src="./images/code.png">
+            </div> -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <script
+  type="text/javascript"
+  src="https://cdn.bootcss.com/vConsole/3.3.0/vconsole.min.js"
+></script>
+
+<script>
+  // 初始化
+  var vConsole = new VConsole();
+</script> -->
+
+<script>
+  // 测试服线上地址：https://twww.tangseng.io/downloadBtn/index.html
+  // 正式服线上地址：https://down.tangseng.io/download/index.html
+  let ua = window.navigator.userAgent.toLowerCase();
+  // android 环境
+  function isAndroid() {
+    return /Android|Adr/i.test(ua);
+  }
+  // ios 环境
+  function isIos() {
+    return /iPhone|iPod|iPad/i.test(ua);
+  }
+  // 微信环境
+  function isWechat() {
+    return /MicroMessenger/i.test(ua);
+  }
+  // btn事件
+  function toDownload(type, el) {
+    console.log(el);
+    if (isWechat()) {
+      console.log("微信环境");
+      el.style.display = "block";
+      return;
+    }
+    if (type === "androidBtn") {
+      window.location.href = "https://video.whkuaiyu.com/app/TangSeng.apk";
+      return;
+    }
+    if (type === "iosBtn") {
+      window.location.href = "http://live.whkuaiyu.com:8888/livemember/course";
+      return;
+    }
+  }
+  // 判断是否是安卓环境/是的话尝试先唤起app
+  function initOpenApp() {
+    if (isAndroid()) {
+      // console.log("app://com.xinxin.tangseng?anchorId=2001022");
+      // window.location.href = "app://com.xinxin.tangseng";
+      window.location.href = "app://com.xinxin.tangseng?anchorId=2001022";
+    }
+  }
+  // 加载完成
+  window.onload = function () {
+    console.log("测试版v1.0.6");
+    console.log("-android-", isAndroid(), "-ios-", isIos(), "-wx-", isWechat());
+    initOpenApp();
+    let androidBtn = document.querySelector(".android_btn");
+    let iosBtn = document.querySelector(".ios_btn");
+    let shadowEl = document.getElementById("shadow");
+    androidBtn.onclick = function (el) {
+      console.log(el);
+      toDownload("androidBtn", shadowEl);
+    };
+    iosBtn.onclick = function (el) {
+      console.log(el);
+      toDownload("iosBtn", shadowEl);
+    };
+    shadowEl.onclick = function (el) {
+      console.log(shadowEl);
+      shadowEl.style.display = "none";
+    };
+    //检测是否是微信内置浏览器
+    if (isWechat()) {
+      shadowEl.style.display = "block";
+    }
+  };
+</script>
+<div style="display: none">
+  <script
+    src="https://s19.cnzz.com/z_stat.php?id=1274482934&web_id=1274482934"
+    language="JavaScript"
+  ></script>
+</div>
